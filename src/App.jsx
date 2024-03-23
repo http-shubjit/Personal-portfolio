@@ -1,29 +1,39 @@
-import React from 'react'
-import './App.scss'
-import Navbar from './Component/Navbar/Navbar'
-import Hero from './Component/Hero/Hero'
-import Parallax from './Component/Parallax/Parallax'
-import Services from './Component/Services/Services'
-import Portfolio from './Component/Portfolio/Portfolio'
-import Contact from './Component/Contact/Contact'
+import Test from "./Test";
+import "./app.scss";
+import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
+import Hero from "./components/hero/Hero";
+import Navbar from "./components/navbar/Navbar";
+import Parallax from "./components/parallax/Parallax";
+import Portfolio from "./components/portfolio/Portfolio";
+import Services from "./components/services/Services";
+
 const App = () => {
   return (
     <div>
-      <section id='Homepage'>
+      <Cursor />
+      <section id="Homepage">
         <Navbar />
         <Hero />
       </section>
-
-      <section id='Services'><Parallax type="Services" /></section>
-      <section> <Services /></section>
-      <section id='Portfolio'><Parallax type="Portfolio"
-      /></section>
+      <section id="Services">
+        <Parallax type="services" />
+      </section>
+      <section>
+        <Services />
+      </section>
+      <section id="Portfolio">
+        <Parallax type="portfolio" />
+      </section>
       <Portfolio />
-      <section id='Contact'><Contact /> </section>
-
-
+      <section id="Contact">
+        <Contact />
+      </section>
+      {/* Framer Motion Crash Course */}
+      {/* <Test/>
+    <Test/> */}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
